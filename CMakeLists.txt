@@ -1,6 +1,22 @@
 cmake_minimum_required(VERSION 3.26)
-project(theta)
+project(untitled)
 
 set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
 
-add_executable(theta main.cpp)
+
+find_package(Qt6 COMPONENTS
+        Core
+        Gui
+        Widgets
+        REQUIRED)
+
+add_executable(untitled main.cpp)
+target_link_libraries(untitled
+        Qt::Core
+        Qt::Gui
+        Qt::Widgets
+)
+
